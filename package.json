@@ -1,0 +1,31 @@
+{
+  "name": "matrix-mxisd-aws-keycloak-endpoints",
+  "version": "1.0.0",
+  "description": "AWS Serverless Matrix (Synapse) MXISD endpoints for Keycloak SSO",
+  "main": "handler.js",
+  "dependencies": {
+    "jwt-decode": "^2.2.0",
+    "simple-oauth2": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfsys/matrix-mxisd-aws-keycloak-endpoints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perfsys/matrix-mxisd-aws-keycloak-endpoints/issues"
+  },
+  "homepage": "https://github.com/perfsys/matrix-mxisd-aws-keycloak-endpoints#readme"
+}

@@ -1,0 +1,46 @@
+service: matrix-mxisd-aws-keycloak-endpoints
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+# you can define service wide environment variables here
+  environment:
+    CLIENT_ID: 'CLIENT_ID'
+    CLIENT_SECRET: 'CLIENT_SECRET'
+    AUTH_URL: 'AUTH_URL'
+    REALM: 'REALM'
+
+functions:
+
+  auth:
+    handler: handler.auth
+    events:
+      - http:
+          path: _mxisd/backend/api/v1/auth/login
+          method: post
+          cors: true
+
+  directory:
+    handler: handler.logger
+    events:
+      - http:
+          path: _mxisd/backend/api/v1/directory/user/search
+          method: post
+          cors: true
+
+  p_displayName:
+    handler: handler.logger
+    events:
+      - http:
+          path: _mxisd/backend/api/v1/profile/displayName
+          method: post
+          cors: true
+
+  p_roles:
+    handler: handler.logger
+    events:
+      - http:
+          path: _mxisd/backend/api/v1/profile/roles
+          method: post
+          cors: true
