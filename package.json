@@ -4,6 +4,8 @@
   "description": "AWS Serverless Matrix (Synapse) MXISD endpoints for Keycloak SSO",
   "main": "handler.js",
   "dependencies": {
+    "base32": "0.0.6",
+    "email-addresses": "^3.0.3",
     "jwt-decode": "^2.2.0",
     "simple-oauth2": "^2.2.1"
   },

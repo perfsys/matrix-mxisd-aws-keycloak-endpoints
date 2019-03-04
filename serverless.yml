@@ -22,7 +22,8 @@ functions:
           cors: true
 
   directory:
-    handler: handler.logger
+#    handler: handler.logger
+    handler: handler.directory
     events:
       - http:
           path: _mxisd/backend/api/v1/directory/user/search
@@ -44,3 +45,13 @@ functions:
           path: _mxisd/backend/api/v1/profile/roles
           method: post
           cors: true
+
+  identity_single:
+#    handler: handler.logger
+    handler: handler.single_3PID_lookup
+    events:
+      - http:
+          path: _mxisd/backend/api/v1/identity/single
+          method: post
+          cors: true
+
