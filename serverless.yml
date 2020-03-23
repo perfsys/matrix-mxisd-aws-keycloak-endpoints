@@ -2,7 +2,7 @@ service: matrix-mxisd-aws-keycloak-endpoints
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
 
 # you can define service wide environment variables here
   environment:
